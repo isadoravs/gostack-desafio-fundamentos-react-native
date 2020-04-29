@@ -59,7 +59,6 @@ const CartProvider: React.FC = ({ children }) => {
     async id => {
       const newProducts = products.map(prod => {
         if (prod.id === id) {
-          // eslint-disable-next-line no-param-reassign
           prod.quantity += 1;
         }
         return prod;
@@ -80,7 +79,6 @@ const CartProvider: React.FC = ({ children }) => {
         if (prod.id === id) {
           if (prod.quantity === 1) return false;
           if (prod.quantity > 0) {
-            // eslint-disable-next-line no-param-reassign
             prod.quantity -= 1;
           }
         }

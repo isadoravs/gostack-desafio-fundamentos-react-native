@@ -26,7 +26,6 @@ const FloatingCart: React.FC = () => {
   const cartTotal = useMemo(() => {
     const total = products.reduce(
       (accumulator: number, { price, quantity }) => {
-        // eslint-disable-next-line no-param-reassign
         accumulator += price * quantity;
         return accumulator;
       },
@@ -38,7 +37,6 @@ const FloatingCart: React.FC = () => {
 
   const totalItensInCart = useMemo(() => {
     const total = products.reduce((accumulator: number, { quantity }) => {
-      // eslint-disable-next-line no-param-reassign
       accumulator += quantity;
       return accumulator;
     }, 0);
